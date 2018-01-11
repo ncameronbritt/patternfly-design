@@ -2,13 +2,27 @@
 
 ![Image of Modeless Overlay Empty State Callout](img/modeless-overlay-empty-state-callout.png)
 
-**Usage Scenario** The modeless overlay is a pattern that can be used as a replacement for a traditional modal. The modeless overlay can be used in scenarios in which a user may have to access secondary actions or information in order to complete a task. The information and actions on the modeless overlay are directly connected to the main underlying UI and allow the user to still interact with this underlying UI even when the modeless overlay is expanded.
 
-**Animation** Whenever the modeless overlay panel is expanded or collapsed, there is a subtle sliding motion that accompanies it. The panel glides in and out of the side of the underlying UI that it is anchored to.
+**Usage Scenario** The modeless overlay is a pattern that can be used as a replacement for a traditional modal. The modeless overlay can be used in scenarios in which a user may have to access secondary actions or information in order to complete a task. The information and actions on the modeless overlay are directly connected to the main underlying UI and allow the user to still interact with this underlying UI even with the modeless overlay.
+
+**Animation** Whenever an anchored overlay panel is expanded or collapsed, there is a subtle sliding motion that accompanies it. The panel glides in and out of the side of the underlying UI that it is anchored to.
 
 **Accessing the Overlay Panel** The user can access the overlay panel by creating a new object, editing a line of text, selecting an object, or other actions from an access point featured on the main underlying UI.
 
-1. **Overlay Panel:** The panel itself rests right along the bottom of the top navigation but does not bleed onto the top navigation bar. There is a slight shadow around the overlay panel that helps to reinforce that it is located on top of the main page. The panel may be anchored to one side of the underlying UI (top, left, right, or bottom). The overlay panel should not cover any persistent navigational elements such as a top or side navigation bar.
+**Position of the Overlay**
+- The initial position of the overlay panel should never cover any persistent navigational elements such as a top or side navigation bar.
+- An anchored overlay may be attached to one side of the underlying UI (top, left, right, or bottom).
+- A free-floating overlays should appear close to the action that invokes it.
+
+**Modeless Overlays with Modals**
+- A modeless overlay may be used with a modal overlay to provide help or other other actions contextual to the modal.
+- As with a non-modal UI, the modal should still be accessible when the modeless overlay is on top.
+- At desktop resolutions, the size of free-floating overlays should not be constrained by the size of the modal. The modeless overlay may s
+- If the width of a modeless overlay exceeds that of the modal, the content of the modeless overlay should replace the content of the modal, with a back button to return to the modal contents. This behavior is similar to the [mobile behavior](#modeless-overlay-mobile).   
+
+
+**Other Details**
+1. **Shadow:** There is a slight shadow around the overlay panel that helps to reinforce that it is located on top of the main page.  
 
 2. **Close Button:** The close button allows the user to dismiss the overlay pattern. When the panel is closed, there is a slight animation that shows the overlay panel sliding back into the side it was anchored on.
 
@@ -16,7 +30,7 @@
 
 4. **Content Area:** Object specific content such as descriptive title, date, status, product owner, collaborators, description, etc. could live here.
 
-5. **View Full Page:** If a user needs to view the details featured on the panel in a larger environment, the user can extend the panel to be a full page. Once the full page has been activated, the user can get back to the standard view of the overlay panel by clicking on a button entitled "View Standard Page". This will return the modeless overlay back to its original state.
+5. **Optional View Full Page:** For applications that require it, a user may view the details featured on the panel in a larger environment by expanding the panel to be a full page. Once the full page has been activated, the user can get back to the standard view of the overlay panel by clicking on a button entitled "View Standard Page". This will return the modeless overlay back to its original state. The full-page view should not be used when the overlay is invoked from a modal.
 
 ![Image of Modeless Overlay Panel](img/modeless-overlay-panel-callout.png)
 
