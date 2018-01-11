@@ -35,3 +35,4 @@ Notes about the behavior of the modeless overlay panel:
 ## Open Questions
 - Should a free-floating overlay scroll with the underlying page, or maintain the same position with respect to the viewport (does the page scroll behind the overlay)? I.e. does it attach to/rest on the page below, or float above?
 - Could a user have multiple free-floating overlays at the same time? Or a combination of anchored and free-floating? If so, each would need its own z-index: Newer overlays should sit atop older overlays.
+- Would we want to prescribe some set widths? E.g. S, M and L.

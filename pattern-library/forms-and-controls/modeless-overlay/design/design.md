@@ -14,11 +14,13 @@
 - An anchored overlay may be attached to one side of the underlying UI (top, left, right, or bottom).
 - A free-floating overlays should appear close to the action that invokes it.
 
-**Modeless Overlays with Modals**
+**Use with Modals**
 - A modeless overlay may be used with a modal overlay to provide help or other other actions contextual to the modal.
 - As with a non-modal UI, the modal should still be accessible when the modeless overlay is on top.
-- At desktop resolutions, the size of free-floating overlays should not be constrained by the size of the modal. The modeless overlay may s
+- At desktop resolutions, the size of free-floating overlays does not need to be constrained by the size of the modal. In other words, portions of the modeless overlay may hang over the darkened background around the modal.
+- The modeless overlay may be moved anywhere on the viewport, including the darkened background.  
 - If the width of a modeless overlay exceeds that of the modal, the content of the modeless overlay should replace the content of the modal, with a back button to return to the modal contents. This behavior is similar to the [mobile behavior](#modeless-overlay-mobile).   
+- Dismissing the modal will also close the modeless overlay, as it is contextual to the modal.
 
 
 **Other Details**
